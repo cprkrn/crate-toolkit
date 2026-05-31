@@ -59,7 +59,7 @@ Each module is runnable and documented. See `docs/` for the platform-specific te
 
 - [docs/spotify.md](docs/spotify.md) — scraping playlists (embed JSON, authenticated scroll, console exfil)
 - [docs/soundcloud.md](docs/soundcloud.md) — api-v2 + client_id extraction
-- [docs/beatport.md](docs/beatport.md) — OAuth token capture, search, playlist API
+- [docs/beatport.md](docs/beatport.md) — search + playlist API
 - [docs/rekordbox.md](docs/rekordbox.md) — reading the encrypted master.db with pyrekordbox
 - [docs/discogs.md](docs/discogs.md) — release API, collection, marketplace (US-shipping filter)
 
