@@ -12,7 +12,7 @@ import re
 import time
 import requests
 
-UA = "Mozilla/5.0 (compatible; crate-pipeline/1.0)"
+UA = "Mozilla/5.0 (compatible; crate-toolkit/1.0)"
 
 
 def get_client_id() -> str:

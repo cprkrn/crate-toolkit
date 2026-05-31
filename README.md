@@ -1,4 +1,4 @@
-# crate-pipeline
+# crate-toolkit
 
 A toolkit for DJs who pull inspiration from streaming playlists and want to turn that into an organized, deduplicated record/track library across **Beatport**, **rekordbox**, **Discogs**, **Bandcamp**, **Spotify**, and **SoundCloud**.
 
@@ -41,8 +41,8 @@ It started as a personal workflow ("I have 13 reference playlists across Spotify
 ## Quick start
 
 ```bash
-git clone https://github.com/<you>/crate-pipeline
-cd crate-pipeline
+git clone https://github.com/<you>/crate-toolkit
+cd crate-toolkit
 pip install -r requirements.txt
 cp examples/config.example.yaml config.yaml   # edit with your IDs (gitignored)
 ```
