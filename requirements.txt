@@ -1,0 +1,9 @@
+# Core
+requests>=2.31
+PyYAML>=6.0
+
+# rekordbox library access (encrypted master.db)
+pyrekordbox>=0.3.0
+
+# Optional: report generation
+markdown-pdf>=1.3

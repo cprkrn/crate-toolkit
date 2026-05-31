@@ -1,0 +1,25 @@
+# Copy to ../config.yaml (gitignored) and fill in YOUR values.
+# Nothing here is secret on its own, but keep it out of git anyway.
+
+sources:
+  spotify:
+    # public playlist IDs you want to ingest (the part after /playlist/)
+    - "PLAYLIST_ID_1"
+    - "PLAYLIST_ID_2"
+  soundcloud:
+    # full set URLs, e.g. https://soundcloud.com/USERNAME/sets/SETNAME
+    - "https://soundcloud.com/USERNAME/sets/SETNAME"
+
+beatport:
+  # destination playlists, mapped by a bucket name you choose
+  buckets:
+    tech: "Tech"        # will create "Tech A", "Tech B", ... at 100/playlist
+    minimal: "Minimal"
+  max_per_playlist: 100
+
+discogs:
+  username: "YOUR_DISCOGS_USERNAME"
+
+# Beatport track_ids confirmed as wrong matches — skipped on every run.
+# Append to this as you find them (see src/qa.py).
+blocklist: []

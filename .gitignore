@@ -1,0 +1,26 @@
+# Secrets / personal config
+config.yaml
+config.json
+*.token
+.env
+tokens/
+
+# Data dumps (your playlists, library exports, etc.)
+data/
+*.csv
+*.db
+*.db-wal
+*.db-shm
+out/
+exports/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+.ipynb_checkpoints/
+
+# OS
+.DS_Store
+Thumbs.db
