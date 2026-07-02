@@ -2,8 +2,14 @@
 requests>=2.31
 PyYAML>=6.0
 
+# Fuzzy matching (dedup + catalog matching)
+rapidfuzz>=3.0
+
 # rekordbox library access (encrypted master.db)
 pyrekordbox>=0.3.0
+
+# Audio-quality audit (spectral analysis) — also needs `ffmpeg` on PATH
+numpy>=1.24
 
 # Optional: report generation
 markdown-pdf>=1.3

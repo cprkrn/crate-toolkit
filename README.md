@@ -19,6 +19,34 @@ It started as a personal workflow ("I have 13 reference playlists across Spotify
 | Look up Discogs releases / collection / marketplace | `src/discogs.py` |
 | Dedup tracks across sources + library + blocklist | `src/dedup.py` |
 | Genre-based QA (flag wrong fuzzy matches) | `src/qa.py` |
+| Auto-sort the rekordbox library into genre crates | `scripts/rekordbox_genre_sort.py` |
+| Find duplicate tracks (incl. the same track as MP3 + AIFF) | `scripts/rekordbox_dupes.py` |
+| Detect fake / transcoded "lossless" files (spectral) | `scripts/aiff_quality_audit.py` |
+| Build a Beatport playlist from a track list | `scripts/beatport_playlist.py` |
+| Auto-build a DJ set as an energy arc | `scripts/rekordbox_set_arc.py` |
+
+## Scripts (standalone tools)
+
+Runnable, self-contained utilities in [`scripts/`](scripts/) — point them at your own library/account. No credentials or personal data are baked in; Beatport tools read a short-lived token from `BEATPORT_TOKEN`.
+
+```bash
+# sort every track into a playlist under your rekordbox "Genre" folder (idempotent)
+python scripts/rekordbox_genre_sort.py --dry        # preview first, then drop --dry
+
+# find duplicate tracks (same track owned twice, e.g. MP3 + AIFF)
+python scripts/rekordbox_dupes.py
+
+# flag "lossless" files that are really lossy transcodes (needs ffmpeg + numpy)
+python scripts/aiff_quality_audit.py
+
+# build a Beatport playlist from a JSON list of {artist,name} or {track_id}
+BEATPORT_TOKEN=... python scripts/beatport_playlist.py "My Playlist" tracks.json
+
+# auto-build an ordered set (energy arc) from your library by genre + BPM
+python scripts/rekordbox_set_arc.py "My Set"
+```
+
+> Scripts that **write** to rekordbox back up `master.db` first and require rekordbox to be **closed**.
 
 ## Architecture
 
